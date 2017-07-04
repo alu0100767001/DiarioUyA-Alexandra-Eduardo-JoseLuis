@@ -1,7 +1,6 @@
 "use strict"
 let express = require('express'),
 	app = express();
-var session = require('express-session');
 
 //Configuramos el directorio de vistas
 app.set('views', './views');
