@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Diario UyA</title>
+    <link rel="icon" type="image/png" href="../img/diario.png" />
+    
+    
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    
+    <link src="js/foro.js" rel="stylesheet">
+    
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+          
+    
+    
+    
+          
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#Diario">
+                        Diario UyA
+                    </a>
+                </li>
+                <li>
+                    <a href="#Foro" onclick="mostrarforo(this); return false">Foro General</a>
+                </li>
+                <li>
+                    <a href="#Incidencias" onclick="mostrarincidencia(this); return false">Incidencias</a>
+                </li>
+                <li>
+                    <a href="#AEDA" onclick="mostrarAEDA(this); return false">AEDA</a>
+                </li>
+                <li>
+                    <a href="#DSI" onclick="mostrarDSI(this); return false">DSI</a>
+                </li>
+                <li>
+                    <a href="#FIS" onclick="mostrarFIS(this); return false">FIS</a>
+                </li>
+                <li>
+                    <a href="#GPI" onclick="mostrarGPI(this); return false">GPI</a>
+                </li>
+                <li>
+                    <a href="#SIPC" onclick="mostrarSIPC(this); return false">SIPC</a>
+                </li>
+                <li>
+                    <a href="#UYA" onclick="mostrarUYA(this); return false">UYA</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Diario UyA -->
+        <div class="row">
+        <section id="Diario">
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                
+                    <div class="col s12">
+                        <h1>Diario UyA</h1>
+                        <p>¡BIENVENIDO!</p>
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Desplegar Menu</a>
+                    </div>
+                
+            </div>
+        </div>
+        </section>
+        </div>
+        <!-- Foro General -->
+        <div class="row">
+        <div id="ocultoforo" style="display:none">
+            <section id="Foro">
+                <div id="page-content-wrapper">
+                    <div class="container-fluid">
+                        
+                            <div aria-live=”polite” class="col s12">
+                                <h1>Foro General</h1>
+                                <p>Aquí podrás compartir lo que desees respecto a las clase</p>
+                                <br>
+                                <ul id="forito">
+                                </ul>
+                                <input type="text" style="width:300px;height:30px" placeholder="Escribe aquí" id="foro1">
+                                <br>
+                                <input class="btn btn-default" type="submit" value="Enviar" onclick="return add_li()" /> 
+                                
+                        </div>
+                    
+                </div>
+                </div>
+            </section>
+        </div>
+        </div>
+        <!-- Incidencias -->
+        <div id="ocultoinci" style="display:none">
+            <section id="Incidencias">
+                <div id="page-content-wrapper">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div aria-live=”polite” class="col-lg-12">
+                                <h1>Incidencias</h1>
+                                <p>Lugar para declarar las incidencias acontecidas en clase</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <!-- AEDA -->
+        <div id="ocultoaeda" style="display:none">
+            <section id="AEDA">
+                <div id="page-content-wrapper">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div aria-live=”polite” class="col-lg-12">
+                                <h1>AEDA</h1>
+                                <p>AEDA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- DSI -->
+        <div id="ocultodsi" style="display:none">
+            <section id="DSI">
+                <div id="page-content-wrapper">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div aria-live=”polite” class="col-lg-12">
+                                <h1>DSI</h1>
+                                <p>DSI</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- FIS -->
+        <div id="ocultofis" style="display:none">
+            <section id="FIS">
+                <div id="page-content-wrapper">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div aria-live=”polite” class="col-lg-12">
+                                <h1>FIS</h1>
+                                <p>FIS</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- GPI -->
+        <div id="ocultogpi" style="display:none">
+            <section id="GPI">
+                <div id="page-content-wrapper">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div aria-live=”polite” class="col-lg-12">
+                                <h1>GPI</h1>
+                                <p>GPI</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- SPIC -->
+        <div id="ocultosipc" style="display:none">
+            <section id="SPIC">
+                <div id="page-content-wrapper">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div aria-live=”polite” class="col-lg-12">
+                                <h1>SPIC</h1>
+                                <p>SPIC</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- UYA -->
+        <div id="ocultouya" style="display:none">
+            <section id="UYA">
+                <div id="page-content-wrapper">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div aria-live=”polite” class="col-lg-12">
+                                <h1>UYA</h1>
+                                <p>UYA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+    
+    <script>
+    function mostrarforo(enla) {
+      obj = document.getElementById('ocultoforo');
+      obj.style.display = (obj.style.display == 'block') ? 'none' : 'block';
+    }
+    </script>
+    <script>
+    function mostrarincidencia(enla) {
+      obj = document.getElementById('ocultoinci');
+      obj.style.display = (obj.style.display == 'block') ? 'none' : 'block';
+    }
+    </script>
+    <script>
+    function mostrarAEDA(enla) {
+      obj = document.getElementById('ocultoaeda');
+      obj.style.display = (obj.style.display == 'block') ? 'none' : 'block';
+    }
+    </script>
+    <script>
+    function mostrarDSI(enla) {
+      obj = document.getElementById('ocultodsi');
+      obj.style.display = (obj.style.display == 'block') ? 'none' : 'block';
+    }
+    </script>
+    <script>
+    function mostrarFIS(enla) {
+      obj = document.getElementById('ocultofis');
+      obj.style.display = (obj.style.display == 'block') ? 'none' : 'block';
+    }
+    </script>
+    <script>
+    function mostrarGPI(enla) {
+      obj = document.getElementById('ocultogpi');
+      obj.style.display = (obj.style.display == 'block') ? 'none' : 'block';
+    }
+    </script>
+    <script>
+    function mostrarSIPC(enla) {
+      obj = document.getElementById('ocultosipc');
+      obj.style.display = (obj.style.display == 'block') ? 'none' : 'block';
+    }
+    </script>
+    <script>
+    function mostrarUYA(enla) {
+      obj = document.getElementById('ocultouya');
+      obj.style.display = (obj.style.display == 'block') ? 'none' : 'block';
+    }
+    </script>
+</body>
+
+
+</html>
